@@ -1,0 +1,54 @@
+Spiio Sensor VC2.5 Reading the modem IMEI and eUICC/SIM IMSI
+
+Initialising UART for modem communication...DONE
+Initialising the Modem AT Command Parser...DONE
+Initializing the modem
+...wait
+...wait
+...wait
+...DONE
+The modem powered up
+Reading IMEI and IMSI
+IMEI: 357520076830005
+IMSI: 204080807023928
+Reading RSSI
+RSSI: 99,99
+...wait
+RSSI: 16,1
+...wait
+RSSI: 17,1
+...wait
+RSSI: 16,1
+...wait
+RSSI: 16,1
+...wait
+RSSI: 16,2
+...wait
+RSSI: 16,2
+...wait
+RSSI: 14,2
+...wait
+RSSI: 15,2
+...wait
+RSSI: 15,2
+...wait
+RSSI: 14,2
+...wait
+RSSI: 15,2
+...wait
+RSSI: 15,2
+...wait
+RSSI: 16,3
+...wait
+RSSI: 16,1
+...wait
+RSSI: 14,2
+...wait
+RSSI: 15,3
+...wait
+RSSI: 17,2
+...wait
+RSSI: 18,3
+...wait
+RSSI: 8,2
+...wait

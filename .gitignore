@@ -1,0 +1,8 @@
+BUILD
+jsmn
+mbed-os
+ublox-at-cellular-interface-ext
+ublox-cellular-base
+ublox-cellular-driver-gen
+.temp
+!.mbed

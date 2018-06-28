@@ -1,0 +1,59 @@
+u-blox C030-U201 Reading the modem IMEI and eUICC/SIM IMSI
+
+Initialising UART for modem communication...DONE
+Initialising the Modem AT Command Parser...DONE
+Initializing the modem
+...wait
+...wait
+...wait
+...wait
+...wait
+...wait
+...DONE
+The modem powered up
+Reading IMEI and IMSI
+IMEI: 357520072998384
+Reading RSSI
+RSSI: 20,1
+...wait
+RSSI: 21,1
+...wait
+RSSI: 22,3
+...wait
+RSSI: 21,3
+...wait
+RSSI: 22,3
+...wait
+RSSI: 21,1
+...wait
+RSSI: 21,1
+...wait
+RSSI: 20,2
+...wait
+RSSI: 19,2
+...wait
+RSSI: 22,1
+...wait
+RSSI: 22,1
+...wait
+RSSI: 21,1
+...wait
+RSSI: 22,1
+...wait
+RSSI: 22,1
+...wait
+RSSI: 22,1
+...wait
+RSSI: 22,1
+...wait
+RSSI: 22,1
+...wait
+RSSI: 21,2
+...wait
+RSSI: 22,1
+...wait
+RSSI: 20,2
+...wait
+RSSI: 21,1
+...wait
+RSSI: 20,1
