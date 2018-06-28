@@ -1,0 +1,688 @@
+Ublox C030 U201 development board Reading the Antenna RSSI 
+
+Initializing the modem
+AT> AT
+AT? OK%n
+AT(Timeout)
+AT> AT
+AT? OK%n
+AT(Timeout)
+AT> AT
+AT? OK%n
+AT(Timeout)
+AT> AT
+AT? OK%n
+AT(Timeout)
+AT> AT
+AT? OK%n
+AT(Timeout)
+AT> AT
+AT? OK%n
+AT(Timeout)
+AT> AT
+AT? OK%n
+AT< AT
+AT< 
+AT= OK
+AT> AT+IPR=115200
+AT? OK%n
+AT< 
+AT< AT+IPR=115200
+AT< 
+AT= OK
+AT> ATE0;+CMEE=2
+AT? OK%n
+AT< 
+AT< ATE0;+CMEE=2
+AT< 
+AT= OK
+AT> AT&K0
+AT? OK%n
+AT< 
+AT= OK
+AT> AT&C1
+AT? OK%n
+AT< 
+AT= OK
+AT> AT&D0
+AT? OK%n
+AT< 
+AT= OK
+AT> AT+CPIN?
+AT? +CPIN: %*15[^
+]
+%n
+AT= +CPIN: READY
+
+AT? OK%n
+AT= OK
+AT> ATI
+AT? %*19[^
+]
+%n
+AT= SARA-U201-03B-00
+
+AT? OK
+%n
+AT= OK
+
+AT> AT+UGPIOC=16,2
+AT? OK%n
+AT= OK
+AT> AT+CCID
+AT? +CCID: %*20[^
+]
+%n
+AT< 
+AT= +CCID: 8944500812151969676
+
+AT? OK
+%n
+AT= OK
+
+AT> AT+CIMI
+AT? %*15[^
+]
+%n
+AT= 234507093196967
+
+AT? OK
+%n
+AT= OK
+
+AT> AT+CGSN
+AT? %*15[^
+]
+%n
+AT= 357520072998384
+
+AT? OK
+%n
+AT= OK
+
+AT> AT+GSN
+AT? %*18[^
+]
+%n
+AT= 357520072998384
+
+AT? OK
+%n
+AT= OK
+
+AT> AT+CMGF=1
+AT? OK%n
+AT= OK
+AT> AT+CNMI=2,1
+AT? OK%n
+AT< 
+AT= OK
+AT> AT+CGSMS=1
+AT? OK%n
+AT< 
+AT= OK
+AT> AT+CSCA?
+AT? +CSCA: "%*31[^"]"%n
+AT< 
+AT! +CMS ERROR
+AT(Aborted)
+AT> AT+CREG=1
+AT? OK%n
+AT< 
+AT= OK
+AT> AT+CGREG=1
+AT? OK%n
+AT< 
+AT= OK
+AT> AT+CEREG=1
+AT? OK%n
+AT< 
+AT! +CME ERROR
+AT(Aborted)
+AT> AT+COPS?
+AT? +COPS: %*d%n
+AT< 
+AT= +COPS: 0
+AT? OK%n
+AT< 
+AT= OK
+AT> AT+CREG?
+AT? OK%n
+AT< 
+AT! +CREG
+AT? OK%n
+AT< 
+AT= OK
+AT> AT+CGREG?
+AT? OK%n
+AT< 
+AT! +CGREG
+AT? OK%n
+AT< 
+AT= OK
+AT> AT+CEREG?
+AT? OK%n
+AT< 
+AT! +CME ERROR
+AT(Aborted)
+AT? .%n
+AT< 
+AT! +UMWI
+AT? .%n
+AT< 
+AT! +UMWI
+AT? .%n
+AT< 
+AT! +UMWI
+AT? .%n
+AT< 
+AT! +UMWI
+AT? .%n
+AT(Timeout)
+AT? .%n
+AT(Timeout)
+AT? .%n
+AT(Timeout)
+AT? .%n
+AT(Timeout)
+AT? .%n
+AT(Timeout)
+AT? .%n
+AT(Timeout)
+AT? .%n
+AT< 
+AT! +CREG
+AT? .%n
+AT< 
+AT! +CGREG
+AT? .%n
+AT(Timeout)
+AT? .%n
+AT(Timeout)
+AT> AT+COPS?
+AT? +COPS: %*d,%*d,"%*[^"]",%*d
+%n
+AT< 
+AT= +COPS: 0,0,"TeliaDK",2
+
+AT> AT+UPSND=0,8
+AT? +UPSND: %*d,%*d,%*d
+%n
+AT= +UPSND: 0,8,0
+
+AT? OK%n
+AT= OK
+AT> AT+UPSD=0,1,"jtm2m"
+AT? OK%n
+AT< 
+AT= OK
+AT> AT+UPSD=0,7,"0.0.0.0"
+AT? OK%n
+AT< 
+AT= OK
+AT> AT+UPSD=0,6,0
+AT? OK%n
+AT< 
+AT= OK
+AT> AT+UPSDA=0,3
+AT? OK%n
+AT< 
+AT= OK
+...DONE
+The modem powered up
+Reading RSSI
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 20,1
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -107
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 20,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -101
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 22,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -98
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 21,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -99
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 21,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -99
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 18,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -105
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 19,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -103
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 17,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -108
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 19,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -103
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 18,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -105
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 19,1
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -109
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 18,1
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -111
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 16,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -109
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 17,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -108
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 18,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -105
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 20,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -101
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 20,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -101
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 18,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -105
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 18,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -105
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 20,1
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -107
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 20,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -101
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 18,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -105
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 19,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -103
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 19,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -103
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 16,3
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -103
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 19,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -103
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 19,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -103
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 20,1
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -107
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 21,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -99
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 21,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -99
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 21,1
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -105
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 21,1
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -105
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 21,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -99
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 18,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -105
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 21,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -99
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 21,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -99
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 20,2
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -101
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 20,1
+
+AT? OK
+%n
+AT= OK
+
+RSSI: -107

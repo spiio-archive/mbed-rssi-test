@@ -1,0 +1,38 @@
+{
+  "config": {
+    "network-interface": {
+      "help": "options are ETHERNET,WIFI_ESP8266,MESH_LOWPAN_ND,MESH_THREAD,,WIFI_ODIN,WIFI_REALTEK,CELLULAR_UBLOX",
+      "value": "CELLULAR_UBLOX"
+    },
+    "default-pin": {
+      "help": "For cellular only, the current value of the SIM PIN as a string; only used if PIN checking is enabled on your SIM (not required by default for a C030 board)",
+      "value": 0
+    },
+    "modem_trace": {
+      "help": "Turns AT command trace on/off from the cellular modem, defaults to off",
+      "value": true
+    },
+    "apn": {
+      "help": "For cellular only, the APN string to use for your SIM/network, set to 0 if none (use none for C030)",
+      "value": "\"wlapn.com\""
+    },
+    "username": {
+      "help": "For cellular only, the user name string to use for your APN, set to zero if none (use none for C030)",
+      "value": "\"spiio\""
+    },
+    "password": {
+      "help": "For cellular only, the password string to use for your APN, set to 0 if none (use none for C030)",
+      "value": "\"spiio\""
+    }
+  },
+  "target_overrides": {
+    "*": {
+      "target.features_add": [
+        "COMMON_PAL"
+      ],
+      "platform.stdio-baud-rate": 115200,
+      "platform.stdio-convert-newlines": true,
+      "mbed-trace.enable": 1
+    }
+  }
+}
