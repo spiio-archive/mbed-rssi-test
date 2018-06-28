@@ -1,0 +1,4 @@
+- Clone the repo
+- `mbed deploy` in the root
+- `mbed compile``
+- Flash `st-flash write mbed-rssi-test.bin 0x8000000`
