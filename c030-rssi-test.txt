@@ -1,0 +1,390 @@
+Initializing the modem
+[INFO][UCB ]: Powering up modem...
+AT> AT
+AT? OK%n
+AT(Timeout)
+AT> AT
+AT? OK%n
+AT(Timeout)
+AT> AT
+AT? OK%n
+AT(Timeout)
+AT> AT
+AT? OK%n
+AT(Timeout)
+AT> AT
+AT? OK%n
+AT(Timeout)
+AT> AT
+AT? OK%n
+AT(Timeout)
+AT> AT
+AT? OK%n
+AT< AT
+AT< 
+AT= OK
+AT> AT+IPR=115200
+AT? OK%n
+AT< 
+AT< AT+IPR=115200
+AT< 
+AT= OK
+AT> ATE0;+CMEE=2
+AT? OK%n
+AT< 
+AT< ATE0;+CMEE=2
+AT< 
+AT= OK
+AT> AT&K0
+AT? OK%n
+AT< 
+AT= OK
+AT> AT&C1
+AT? OK%n
+AT< 
+AT= OK
+AT> AT&D0
+AT? OK%n
+AT< 
+AT= OK
+[INFO][UCB ]: Modem Ready.
+AT> AT+CPIN?
+AT? +CPIN: %*15[^
+]
+%n
+AT= +CPIN: READY
+
+AT? OK%n
+AT= OK
+[INFO][UCB ]: No PIN required
+[INFO][UCB ]: SIM Ready.
+AT> ATI
+AT? %*19[^
+]
+%n
+AT= SARA-U201-03B-00
+
+AT? OK
+%n
+AT= OK
+
+AT> AT+UGPIOC=16,2
+AT? OK%n
+AT< 
+AT= OK
+AT> AT+CCID
+AT? +CCID: %*20[^
+]
+%n
+AT< 
+AT= +CCID: 8944500812151969676
+
+AT? OK
+%n
+AT= OK
+
+[INFO][UCB ]: DevInfo: ICCID=8944500812151969676
+AT> AT+CIMI
+AT? %*15[^
+]
+%n
+AT= 234507093196967
+
+AT? OK
+%n
+AT= OK
+
+[INFO][UCB ]: DevInfo: IMSI=234507093196967
+AT> AT+CGSN
+AT? %*15[^
+]
+%n
+AT= 357520072998384
+
+AT? OK
+%n
+AT= OK
+
+[INFO][UCB ]: DevInfo: IMEI=357520072998384
+AT> AT+GSN
+AT? %*18[^
+]
+%n
+AT= 357520072998384
+
+AT? OK
+%n
+AT= OK
+
+[INFO][UCB ]: DevInfo: MEID=357520072998384
+AT> AT+CMGF=1
+AT? OK%n
+AT= OK
+[DBG ][UCB ]: SMS in text mode
+AT> AT+CNMI=2,1
+AT? OK%n
+AT< 
+AT= OK
+[DBG ][UCB ]: SMS URC enabled
+AT> AT+CGSMS=1
+AT? OK%n
+AT< 
+AT= OK
+[DBG ][UCB ]: SMS set to CS preferred
+AT> AT+CSCA?
+AT? +CSCA: "%*31[^"]"%n
+AT< 
+AT= +CSCA: "+447797704000"
+AT? OK%n
+AT< ,145
+AT= OK
+[INFO][UCB ]: SMS Service Centre address is "+447797704000"
+[INFO][UCB ]: Searching Network...
+AT> AT+CREG=1
+AT? OK%n
+AT= OK
+AT> AT+CGREG=1
+AT? OK%n
+AT< 
+AT= OK
+AT> AT+CEREG=1
+AT? OK%n
+AT< 
+AT! +CME ERROR
+[DBG ][UCB ]: AT error : unknown
+AT(Aborted)
+AT> AT+COPS?
+AT? +COPS: %*d%n
+AT< 
+AT= +COPS: 0
+AT? OK%n
+AT< 
+AT= OK
+AT> AT+CREG?
+AT? OK%n
+AT< 
+AT! +CREG
+[INFO][UCB ]: Not (yet) registered for circuit switched service
+AT? OK%n
+AT< 
+AT= OK
+AT> AT+CGREG?
+AT? OK%n
+AT< 
+AT! +CGREG
+[INFO][UCB ]: Not (yet) registered for packet switched service
+AT? OK%n
+AT< 
+AT= OK
+AT> AT+CEREG?
+AT? OK%n
+AT< 
+AT! +CME ERROR
+[DBG ][UCB ]: AT error : unknown
+AT(Aborted)
+AT? .%n
+AT(Timeout)
+AT? .%n
+AT(Timeout)
+AT? .%n
+AT(Timeout)
+AT? .%n
+AT(Timeout)
+AT? .%n
+AT< 
+AT! +CREG
+[INFO][UCB ]: Registered for circuit switched service
+AT? .%n
+AT< 
+AT! +CGREG
+[INFO][UCB ]: Registered for packet switched service
+AT? .%n
+AT(Timeout)
+AT? .%n
+AT(Timeout)
+AT> AT+COPS?
+AT? +COPS: %*d,%*d,"%*[^"]",%*d
+%n
+AT< 
+AT= +COPS: 0,0,"TeliaDK",2
+
+[INFO][UCB ]: Connected to UTRAN
+AT> AT+UPSND=0,8
+AT? +UPSND: %*d,%*d,%*d
+%n
+AT= +UPSND: 0,8,0
+
+AT? OK%n
+AT= OK
+AT> AT+UPSD=0,1,"jtm2m"
+AT? OK%n
+AT< 
+AT= OK
+AT> AT+UPSD=0,7,"0.0.0.0"
+AT? OK%n
+AT< 
+AT= OK
+AT> AT+UPSD=0,6,0
+AT? OK%n
+AT< 
+AT= OK
+AT> AT+UPSDA=0,3
+AT? OK%n
+AT< 
+AT= OK
+...DONE
+The modem powered up
+Reading RSSI
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 21,1
+
+AT? OK
+%n
+AT= OK
+
+[INFO][UCB ]: 3G detected
+[INFO][UCB ]: Raw EC_IO_LEV:                          "1"
+[INFO][UCB ]: Converted qual to EC_NO_LEV:            "41"
+[INFO][UCB ]: Converted rssi indicator value to RSCP: "-64"
+[INFO][UCB ]: Computed RSSI:                          "-105"
+RSSI: -105
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 21,1
+
+AT? OK
+%n
+AT= OK
+
+[INFO][UCB ]: 3G detected
+[INFO][UCB ]: Raw EC_IO_LEV:                          "1"
+[INFO][UCB ]: Converted qual to EC_NO_LEV:            "41"
+[INFO][UCB ]: Converted rssi indicator value to RSCP: "-64"
+[INFO][UCB ]: Computed RSSI:                          "-105"
+RSSI: -105
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 19,2
+
+AT? OK
+%n
+AT= OK
+
+[INFO][UCB ]: 3G detected
+[INFO][UCB ]: Raw EC_IO_LEV:                          "2"
+[INFO][UCB ]: Converted qual to EC_NO_LEV:            "35"
+[INFO][UCB ]: Converted rssi indicator value to RSCP: "-68"
+[INFO][UCB ]: Computed RSSI:                          "-103"
+RSSI: -103
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 19,2
+
+AT? OK
+%n
+AT= OK
+
+[INFO][UCB ]: 3G detected
+[INFO][UCB ]: Raw EC_IO_LEV:                          "2"
+[INFO][UCB ]: Converted qual to EC_NO_LEV:            "35"
+[INFO][UCB ]: Converted rssi indicator value to RSCP: "-68"
+[INFO][UCB ]: Computed RSSI:                          "-103"
+RSSI: -103
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 22,2
+
+AT? OK
+%n
+AT= OK
+
+[INFO][UCB ]: 3G detected
+[INFO][UCB ]: Raw EC_IO_LEV:                          "2"
+[INFO][UCB ]: Converted qual to EC_NO_LEV:            "35"
+[INFO][UCB ]: Converted rssi indicator value to RSCP: "-63"
+[INFO][UCB ]: Computed RSSI:                          "-98"
+RSSI: -98
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 20,1
+
+AT? OK
+%n
+AT= OK
+
+[INFO][UCB ]: 3G detected
+[INFO][UCB ]: Raw EC_IO_LEV:                          "1"
+[INFO][UCB ]: Converted qual to EC_NO_LEV:            "41"
+[INFO][UCB ]: Converted rssi indicator value to RSCP: "-66"
+[INFO][UCB ]: Computed RSSI:                          "-107"
+RSSI: -107
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 21,1
+
+AT? OK
+%n
+AT= OK
+
+[INFO][UCB ]: 3G detected
+[INFO][UCB ]: Raw EC_IO_LEV:                          "1"
+[INFO][UCB ]: Converted qual to EC_NO_LEV:            "41"
+[INFO][UCB ]: Converted rssi indicator value to RSCP: "-64"
+[INFO][UCB ]: Computed RSSI:                          "-105"
+RSSI: -105
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 21,1
+
+AT? OK
+%n
+AT= OK
+
+[INFO][UCB ]: 3G detected
+[INFO][UCB ]: Raw EC_IO_LEV:                          "1"
+[INFO][UCB ]: Converted qual to EC_NO_LEV:            "41"
+[INFO][UCB ]: Converted rssi indicator value to RSCP: "-64"
+[INFO][UCB ]: Computed RSSI:                          "-105"
+RSSI: -105
+...wait
+AT> AT+CSQ
+AT? +CSQ: %*6[^
+]
+%n
+AT= +CSQ: 19,2
+
+AT? OK
+%n
+AT= OK
+
+[INFO][UCB ]: 3G detected
+[INFO][UCB ]: Raw EC_IO_LEV:                          "2"
+[INFO][UCB ]: Converted qual to EC_NO_LEV:            "35"
+[INFO][UCB ]: Converted rssi indicator value to RSCP: "-68"
+[INFO][UCB ]: Computed RSSI:                          "-103"
+RSSI: -103
+...wait

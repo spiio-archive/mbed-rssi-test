@@ -17,11 +17,21 @@
 #include "mbed.h"
 #include "mbed_config.h"
 #include "UbloxATCellularInterfaceExt.h"
+#include "mbed_trace.h"
 
 UbloxATCellularInterfaceExt *interface = new UbloxATCellularInterfaceExt(MDMTXD, MDMRXD, MBED_CONF_UBLOX_CELL_BAUD_RATE, true);
 
+void trace_printer(const char *str)
+{
+  printf("%s\r\n", str);
+}
+
 int main()
 {
+  mbed_trace_init();
+  mbed_trace_config_set(TRACE_ACTIVE_LEVEL_ALL);
+  mbed_trace_print_function_set(trace_printer);
+
   printf("\n\r\n\rSpiio VC2.5. Reading the Antenna RSSI \n\r");
 
   printf("Initializing the modem\r\n");
