@@ -1136,12 +1136,12 @@ int UbloxCellularBase::rssi()
             qual = qualConvert3G[qual];
           }
 
-          tr_info("Converted qual to EC_NO_LEV:            \"%d\"", qual);
+          tr_info("Converted qual to CPICH Ec/Io:          \"%d\"", qual);
 
           rssiRet = rscpConvert3G[rssi];
           tr_info("Converted rssi indicator value to RSCP: \"%d\"", rssiRet);
 
-          rssiRet += qual;
+          rssiRet -= qual;
           tr_info("Computed RSSI:                          \"%d\"", rssiRet);
 
           break;

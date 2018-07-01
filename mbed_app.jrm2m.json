@@ -14,15 +14,15 @@
     },
     "apn": {
       "help": "For cellular only, the APN string to use for your SIM/network, set to 0 if none (use none for C030)",
-      "value": "\"wlapn.com\""
+      "value": "\"jtm2m\""
     },
     "username": {
       "help": "For cellular only, the user name string to use for your APN, set to zero if none (use none for C030)",
-      "value": "\"spiio\""
+      "value": 0
     },
     "password": {
       "help": "For cellular only, the password string to use for your APN, set to 0 if none (use none for C030)",
-      "value": "\"spiio\""
+      "value": 0
     }
   },
   "target_overrides": {
